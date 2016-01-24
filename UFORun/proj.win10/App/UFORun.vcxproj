@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{187d3e60-961a-41ee-bc18-c510a431d22e}</ProjectGuid>
+    <RootNamespace>CocosAppWinRT</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>8.2</ApplicationTypeRevision>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="resources.props" />
+    <Import Project="EngineRoot.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10.props" />
+    <Import Project="..\..\..\cocos2d-x-2.2\cocos2dx\platform\win10\win10_app.props" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.10240.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>UFORun_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204;4251</DisableSpecificWarnings>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\Classes;..\..\Classes\LevelHelper;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes;..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand;$(EngineRoot)external/Box2D/;Cocos2dEngine;Generated Files\Cocos2dEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\..\Classes\CCBox2DPhysicsRotateBy.h" />
+    <ClInclude Include="..\..\Classes\CCSortableArray.h" />
+    <ClInclude Include="..\..\Classes\FireBall.h" />
+    <ClInclude Include="..\..\Classes\GameClock.h" />
+    <ClInclude Include="..\..\Classes\GameContactListener.h" />
+    <ClInclude Include="..\..\Classes\GameLayer.h" />
+    <ClInclude Include="..\..\Classes\GameLevel.h" />
+    <ClInclude Include="..\..\Classes\Hero.h" />
+    <ClInclude Include="..\..\Classes\HeroFireBall.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\LHAbstractClass.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\LHCustomClasses.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\TemporaryDummyClass.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\LevelHelperLoader.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\lhConfig.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHAnimationNode.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHBatch.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHBezier.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactInfo.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactListener.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactNode.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHCustomSpriteMgr.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHCuttingEngineMgr.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHFixture.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHJoint.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHLayer.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHNode.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHParallaxNode.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHPathNode.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHSettings.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHSprite.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHTouchMgr.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\SHDocumentLoader.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHArray.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHDictionary.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHObject.h" />
+    <ClInclude Include="..\..\Classes\MainMenuLayer.h" />
+    <ClInclude Include="..\..\Classes\MessageParser.h" />
+    <ClInclude Include="..\..\Classes\MultiplayerGameState.h" />
+    <ClInclude Include="..\..\Classes\MultiplayerMessage.h" />
+    <ClInclude Include="..\..\Classes\MultiplayerProtocol.h" />
+    <ClInclude Include="..\..\Classes\NextpeerDelegate.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\CCNextpeer.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand\mtrand.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerEventQueue.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifications.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifier.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerPlayer.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerTournamentSupport.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\Rand.h" />
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\WinRT\Nextpeer_WinRT.h" />
+    <ClInclude Include="..\..\Classes\Opponent.h" />
+    <ClInclude Include="..\..\Classes\OpponentAvatarNotificationMessage.h" />
+    <ClInclude Include="..\..\Classes\OpponentFireBall.h" />
+    <ClInclude Include="..\..\Classes\OpponentFireBallUpdateMessage.h" />
+    <ClInclude Include="..\..\Classes\OpponentUpdate.h" />
+    <ClInclude Include="..\..\Classes\Player.h" />
+    <ClInclude Include="..\..\Classes\PlayerData.h" />
+    <ClInclude Include="..\..\Classes\PlayerSpriteProfile.h" />
+    <ClInclude Include="..\..\Classes\PowerUp.h" />
+    <ClInclude Include="..\..\Classes\SimulatedOpponent.h" />
+    <ClInclude Include="..\..\Classes\SpriteUpdateInterpolator.h" />
+    <ClInclude Include="..\..\Classes\ViewPort.h" />
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Cocos2dEngine\Cocos2dRenderer.h" />
+    <ClInclude Include="Cocos2dEngine\OpenGLES.h" />
+    <ClInclude Include="Cocos2dEngine\OpenGLESPage.xaml.h">
+      <DependentUpon>Cocos2dEngine\OpenGLESPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="UFORun_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\..\Classes\CCBox2DPhysicsRotateBy.cpp" />
+    <ClCompile Include="..\..\Classes\CCSortableArray.cpp" />
+    <ClCompile Include="..\..\Classes\FireBall.cpp" />
+    <ClCompile Include="..\..\Classes\GameClock.cpp" />
+    <ClCompile Include="..\..\Classes\GameContactListener.cpp" />
+    <ClCompile Include="..\..\Classes\GameLayer.cpp" />
+    <ClCompile Include="..\..\Classes\GameLevel.cpp" />
+    <ClCompile Include="..\..\Classes\Hero.cpp" />
+    <ClCompile Include="..\..\Classes\HeroFireBall.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\CustomClasses\TemporaryDummyClass.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\LevelHelperLoader.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHAnimationNode.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHBatch.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHBezier.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactInfo.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactListener.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactNode.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHCustomSpriteMgr.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHCuttingEngineMgr.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHFixture.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHJoint.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHLayer.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHNode.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHParallaxNode.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHPathNode.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHSettings.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHSprite.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHTouchMgr.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\SHDocumentLoader.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHArray.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHDictionary.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHObject.cpp" />
+    <ClCompile Include="..\..\Classes\MainMenuLayer.cpp" />
+    <ClCompile Include="..\..\Classes\MessageParser.cpp" />
+    <ClCompile Include="..\..\Classes\MultiplayerGameState.cpp" />
+    <ClCompile Include="..\..\Classes\MultiplayerMessage.cpp" />
+    <ClCompile Include="..\..\Classes\NextpeerDelegate.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\CCNextpeer.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand\mtrand.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerEventQueue.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifier.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerPlayer.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerTournamentSupport.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\Rand.cpp" />
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\WinRT\Nextpeer_WinRT.cpp" />
+    <ClCompile Include="..\..\Classes\Opponent.cpp" />
+    <ClCompile Include="..\..\Classes\OpponentAvatarNotificationMessage.cpp" />
+    <ClCompile Include="..\..\Classes\OpponentFireBall.cpp" />
+    <ClCompile Include="..\..\Classes\OpponentFireBallUpdateMessage.cpp" />
+    <ClCompile Include="..\..\Classes\OpponentUpdate.cpp" />
+    <ClCompile Include="..\..\Classes\Player.cpp" />
+    <ClCompile Include="..\..\Classes\PlayerData.cpp" />
+    <ClCompile Include="..\..\Classes\PlayerSpriteProfile.cpp" />
+    <ClCompile Include="..\..\Classes\PowerUp.cpp" />
+    <ClCompile Include="..\..\Classes\SimulatedOpponent.cpp" />
+    <ClCompile Include="..\..\Classes\SpriteUpdateInterpolator.cpp" />
+    <ClCompile Include="..\..\Classes\ViewPort.cpp" />
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Cocos2dEngine\Cocos2dRenderer.cpp" />
+    <ClCompile Include="Cocos2dEngine\OpenGLES.cpp" />
+    <ClCompile Include="Cocos2dEngine\OpenGLESPage.xaml.cpp">
+      <DependentUpon>Cocos2dEngine\OpenGLESPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Cocos2dEngine\OpenGLESPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\SplashScreen.scale-200.png" />
+    <Image Include="Assets\Square150x150Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\cocos2d-x-2.2\cocos2dx\proj.win10\libcocos2d.vcxproj">
+      <Project>{07c2895d-720c-487d-b7b4-12c293ea533f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cocos2d-x-2.2\extensions\proj.win10\libExtensions.vcxproj">
+      <Project>{6d77fe20-cb74-4bbf-9da7-4c4050769aa5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cocos2d-x-2.2\external\Box2D\proj.win10\libbox2d.vcxproj">
+      <Project>{0c32d479-46d5-46c3-9aa9-0a8ff8320516}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cocos2d-x-2.2\external\chipmunk\proj.win10\chipmunk.vcxproj">
+      <Project>{c7a48118-6eb2-473e-9e10-5789287ece7e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.10240.0" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

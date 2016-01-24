@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>187d3e60-961a-41ee-bc18-c510a431d22e</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>f8868b9a-1bec-48df-b4b6-294815dc7a5d</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Cocos2dEngine">
+      <UniqueIdentifier>{6b9ca606-5a38-4479-a7ec-01bdfeda67bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{a18967bc-4fa1-4c67-bf7e-3f9c8b6a1129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\LevelHelper">
+      <UniqueIdentifier>{2db21913-45ad-4782-802a-8ae28627bb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\LevelHelper\CustomClasses">
+      <UniqueIdentifier>{f71d1cbd-4d69-4e2e-93f1-266e36c4192b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\LevelHelper\Nodes">
+      <UniqueIdentifier>{707a8db3-0f76-4ace-9b2c-d47313fe13ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\LevelHelper\Utilities">
+      <UniqueIdentifier>{bef8f7f5-aebf-4d5d-997a-03bdc48a6ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Nextpeer">
+      <UniqueIdentifier>{c9320012-d862-4724-b2cd-93c876854362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Nextpeer\Nextpeer-Cocos2D-X">
+      <UniqueIdentifier>{cb4b0c3e-31dd-4cbd-a59c-eb7315c3e4a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes">
+      <UniqueIdentifier>{e4c8ff4e-da21-4c23-9dd3-5895f4eeade2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand">
+      <UniqueIdentifier>{f6e36bca-14ee-4e08-83f5-ed159a1b837b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Nextpeer\Nextpeer-Cocos2D-X\winrt">
+      <UniqueIdentifier>{cad989e2-58d5-4139-9f8e-23c9a823090a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="Cocos2dEngine\Cocos2dRenderer.cpp">
+      <Filter>Cocos2dEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Cocos2dEngine\OpenGLES.cpp">
+      <Filter>Cocos2dEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Cocos2dEngine\OpenGLESPage.xaml.cpp" />
+    <ClCompile Include="..\..\Classes\LevelHelper\CustomClasses\TemporaryDummyClass.cpp">
+      <Filter>Classes\LevelHelper\CustomClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHArray.cpp">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHDictionary.cpp">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Utilities\LHObject.cpp">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHAnimationNode.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHBatch.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHBezier.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactInfo.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactListener.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHContactNode.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHCustomSpriteMgr.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHCuttingEngineMgr.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHFixture.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHJoint.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHLayer.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHNode.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHParallaxNode.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHPathNode.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHSettings.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHSprite.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\LHTouchMgr.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\Nodes\SHDocumentLoader.cpp">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\CCBox2DPhysicsRotateBy.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\CCSortableArray.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\FireBall.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\GameClock.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\GameContactListener.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\GameLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\GameLevel.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Hero.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\HeroFireBall.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\MainMenuLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\MessageParser.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\MultiplayerGameState.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\MultiplayerMessage.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\NextpeerDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Opponent.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\OpponentAvatarNotificationMessage.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\OpponentFireBall.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\OpponentFireBallUpdateMessage.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\OpponentUpdate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Player.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\PlayerData.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\PlayerSpriteProfile.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\PowerUp.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\SimulatedOpponent.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\SpriteUpdateInterpolator.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\ViewPort.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\LevelHelper\LevelHelperLoader.cpp">
+      <Filter>Classes\LevelHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\CCNextpeer.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerEventQueue.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifier.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerPlayer.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerTournamentSupport.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\Rand.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand\mtrand.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\WinRT\Nextpeer_WinRT.cpp">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\winrt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="Cocos2dEngine\Cocos2dRenderer.h">
+      <Filter>Cocos2dEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Cocos2dEngine\OpenGLES.h">
+      <Filter>Cocos2dEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Cocos2dEngine\OpenGLESPage.xaml.h" />
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\LHAbstractClass.h">
+      <Filter>Classes\LevelHelper\CustomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\LHCustomClasses.h">
+      <Filter>Classes\LevelHelper\CustomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\CustomClasses\TemporaryDummyClass.h">
+      <Filter>Classes\LevelHelper\CustomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHArray.h">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHDictionary.h">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Utilities\LHObject.h">
+      <Filter>Classes\LevelHelper\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHAnimationNode.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHBatch.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHBezier.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactInfo.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactListener.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHContactNode.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHCustomSpriteMgr.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHCuttingEngineMgr.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHFixture.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHJoint.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHLayer.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHNode.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHParallaxNode.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHPathNode.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHSettings.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHSprite.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\LHTouchMgr.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\Nodes\SHDocumentLoader.h">
+      <Filter>Classes\LevelHelper\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\CCBox2DPhysicsRotateBy.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\CCSortableArray.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\FireBall.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\GameClock.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\GameContactListener.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\GameLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\GameLevel.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Hero.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\HeroFireBall.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\MainMenuLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\MessageParser.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\MultiplayerGameState.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\MultiplayerMessage.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\MultiplayerProtocol.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\NextpeerDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Opponent.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\OpponentAvatarNotificationMessage.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\OpponentFireBall.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\OpponentFireBallUpdateMessage.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\OpponentUpdate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Player.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\PlayerData.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\PlayerSpriteProfile.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\PowerUp.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\SimulatedOpponent.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\SpriteUpdateInterpolator.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\ViewPort.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\LevelHelperLoader.h">
+      <Filter>Classes\LevelHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\LevelHelper\lhConfig.h">
+      <Filter>Classes\LevelHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\CCNextpeer.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerEventQueue.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifications.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerNotifier.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerPlayer.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\NextpeerTournamentSupport.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\Rand.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand\mtrand.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\Classes\mt_rand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\Nextpeer\Nextpeer-Cocos2D-X\WinRT\Nextpeer_WinRT.h">
+      <Filter>Classes\Nextpeer\Nextpeer-Cocos2D-X\winrt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UFORun_TemporaryKey.pfx" />
+    <None Include="$(ZLibBinPath)zlib.dll" />
+    <None Include="$(AngleBinPath)libEGL.dll" />
+    <None Include="$(AngleBinPath)libGLESv2.dll" />
+    <None Include="$(WebsocketsBinPath)libwebsockets.dll" />
+    <None Include="$(SQLiteBinPath)sqlite3.dll" />
+    <None Include="$(CurlBinPath)libcurl.dll" />
+    <None Include="$(CurlBinPath)libeay32.dll" />
+    <None Include="$(CurlBinPath)ssleay32.dll" />
+    <None Include="$(OggBinPath)libogg.dll" />
+    <None Include="$(OggBinPath)libvorbis.dll" />
+    <None Include="$(OggBinPath)libvorbisfile.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Cocos2dEngine\OpenGLESPage.xaml">
+      <Filter>Cocos2dEngine</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
