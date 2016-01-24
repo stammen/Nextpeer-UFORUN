@@ -82,7 +82,7 @@ private:
     void updatePlayState (float dt); // Update loop for the play state (in-game)
     void loadGameLoadState(); // Load the level for the game
     void loadPlayState(); // The level has been loaded. Start the game!
-    void loadLevelAssets(); // Loading level assets for the game such as batch nodes and HUD elements
+    void loadLevelAssets(float dt); // Loading level assets for the game such as batch nodes and HUD elements
     void loadWaitingForOtherPlayersState(); // Waiting for the other players to load the level
     float locateStartLine(); // Locating & return the start line in the current level based on the LevelLoader tag
     float locateFinishLine(); // Locating & return the finish line in the current level based on the LevelLoader tag

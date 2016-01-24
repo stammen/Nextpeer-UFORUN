@@ -261,7 +261,7 @@ void LHCuttingEngineMgr::explodeSpritesInRadius(float radius,
 		if(doSuction) 
 		{
 			distance = b2Distance(b2BodyPosition, b2TouchPosition);
-			if(distance > maxDistance) distance = maxDistance - 0.01;
+			if(distance > maxDistance) distance = maxDistance - 0.01f;
 			// Get the strength
 			//strength = distance / maxDistance; // Uncomment and reverse these two. and ones further away will get more force instead of less
 			strength = (maxDistance - distance) / maxDistance; // This makes it so that the closer something is - the stronger, instead of further
@@ -274,7 +274,7 @@ void LHCuttingEngineMgr::explodeSpritesInRadius(float radius,
 		else
 		{
 			distance = b2Distance(b2BodyPosition, b2TouchPosition);
-			if(distance > maxDistance) distance = maxDistance - 0.01;
+			if(distance > maxDistance) distance = maxDistance - 0.01f;
             
 			strength = (maxDistance - distance) / maxDistance;
 			force = strength * maxForce;
@@ -317,7 +317,7 @@ void LHCuttingEngineMgr::destroyAllPrevioslyCutSprites(){
 
     CCArray* keys = spritesPreviouslyCut->allKeys();
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned int i = 0; i < keys->count(); ++i){
             LHSprite* spr = (LHSprite*)spritesPreviouslyCut->objectForKey(((CCString*)keys->objectAtIndex(i))->getCString());
             if(spr)
                 spr->removeSelf();
@@ -348,7 +348,7 @@ CCArray* LHCuttingEngineMgr::getSprites(){
     CCArray* array = CCArray::create();
     CCArray* keys = spritesPreviouslyCut->allKeys();
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned int i = 0; i < keys->count(); ++i){
             LHSprite* spr = (LHSprite*)spritesPreviouslyCut->objectForKey(((CCString*)keys->objectAtIndex(i))->getCString());
             if(spr){
                 array->addObject(spr);
@@ -409,7 +409,7 @@ LHSprite * LHCuttingEngineMgr::spriteWithVertices(CCPoint* vertices,
     justSprTx->end();
 
 #if COCOS2D_VERSION >= 0x00020000
-    CCRenderTexture *myCutTexture = CCRenderTexture::create(oldRect.size.width, oldRect.size.height);
+    CCRenderTexture *myCutTexture = CCRenderTexture::create((int)oldRect.size.width, (int)oldRect.size.height);
 #else
     CCRenderTexture *myCutTexture = CCRenderTexture::renderTextureWithWidthAndHeight(oldRect.size.width, oldRect.size.height);
 #endif
@@ -504,7 +504,7 @@ LHSprite * LHCuttingEngineMgr::spriteWithVertices(CCPoint* vertices,
         sprCut->setUsePhysicsForTouches(true);
         
         static long long createdSprites = 0;
-        sprCut->setUniqueName(stringFromInt(createdSprites));
+        sprCut->setUniqueName(stringFromInt((int)createdSprites));
         ++createdSprites;
         
         

@@ -13,11 +13,17 @@
 #include "PlayerSpriteProfile.h"
 #include "PlayerData.h"
 
+#ifdef WINRT
+typedef struct {
+    MultiplayerMessageHeader header;
+    uint32_t avatarIdentifier;
+} OpponentAvatarNotificationMessageStruct;
+#else
 typedef struct __attribute__ ((__packed__)) {
     MultiplayerMessageHeader header;
     uint32_t avatarIdentifier;
 } OpponentAvatarNotificationMessageStruct;
-
+#endif
 /**
  Notify about the opponent's avatar selection.
  */

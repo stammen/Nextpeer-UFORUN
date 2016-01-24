@@ -79,6 +79,12 @@ public:
     */
     bool dispatchKeypadMSG(ccKeypadMSGType nMsgType);
 
+    /**
+    @brief does the dispatcher have any delegates
+    */
+    bool hasDelegates() { return m_pDelegates->count() > 0; };
+
+
 protected:
 
     CCArray* m_pDelegates;

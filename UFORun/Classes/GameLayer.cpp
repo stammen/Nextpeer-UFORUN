@@ -117,7 +117,7 @@ bool GameLayer::init(MultiplayerGameState* multiplayerGameState)
         _score = 0;
         _timeSpentRunningInSeconds = 0;
         _timeSinceLastScoreReport = 0;
-        _multiplayerUpdateSentCounter = 0.0f;
+        _multiplayerUpdateSentCounter = 0;
         _startGameCounter = 0;
         
         _player = NULL;
@@ -350,7 +350,7 @@ void GameLayer::updatePlayState(float dt)
                 _player->passedFinishLine();
                 
                 // calculate bonus score based on how long it took the player to complete the level
-                int bonus = MAX(0, LEVEL_MAX_TIME - _timeSpentRunningInSeconds) * PLAYER_BONUS_PER_SECOND;
+                int bonus = (int)(MAX(0, LEVEL_MAX_TIME - _timeSpentRunningInSeconds) * PLAYER_BONUS_PER_SECOND);
                 
                 // If the player finished with a bonus, show the bonus on the screen
                 if (bonus > 0) {
@@ -526,10 +526,10 @@ void GameLayer::loadGameLoadState() {
     _state = kGameLoad;
     
     // We loading the level asset. Start after the loading layer has been loaded.
-    this->scheduleOnce(schedule_selector(GameLayer::loadLevelAssets), 0.1);
+    this->scheduleOnce(schedule_selector(GameLayer::loadLevelAssets), 0.1f);
 }
 
-void GameLayer::loadLevelAssets() {
+void GameLayer::loadLevelAssets(float dt) {
     
     // Create the game layer but hide it at first (we will display it once the level has loaded)
     _gameLayer = CCLayer::create();
@@ -621,7 +621,7 @@ void GameLayer::loadWaitingForOtherPlayersState() {
     
     _waitForPlayesActivityIndicatorNode = CCSprite::createWithSpriteFrameName("hud_activity_indicator.png");
     _waitForPlayesActivityIndicatorNode->setPosition(ccp(_screenSize.width/2, _waitForPlayersNode->getPositionY() - _waitForPlayersNode->getContentSize().height/2));
-    _waitForPlayesActivityIndicatorNode->runAction(CCRepeatForever::create(CCRotateBy::create(0.05, 10.0)));
+    _waitForPlayesActivityIndicatorNode->runAction(CCRepeatForever::create(CCRotateBy::create(0.05f, 10.0f)));
     
     _hudBatchNode->addChild(_waitForPlayersNode);
     _hudBatchNode->addChild(_waitForPlayesActivityIndicatorNode);
@@ -964,7 +964,7 @@ void GameLayer::multiplayerGameStateReady(CCObject *pSender)
     this->unschedule(schedule_selector(GameLayer::waitForOpponentsSpritesLoadingTimeout));
     
     // Register to a synchronized event for this game
-    CCNextpeer::getInstance()->registerToSynchronizedEvent(kStartGameSyncEventName, kStartGameSyncEventTimeout);
+    CCNextpeer::getInstance()->registerToSynchronizedEvent(kStartGameSyncEventName, (uint32_t)kStartGameSyncEventTimeout);
 }
 
 void GameLayer::readyToStartGameCallback(CCObject *pSender)

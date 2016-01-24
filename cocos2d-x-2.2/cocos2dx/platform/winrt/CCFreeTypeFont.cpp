@@ -311,7 +311,7 @@ void CCFreeTypeFont::endLine()
     if(m_currentLine)
     {
         m_lines.push_back(m_currentLine);
-        m_textWidth = max(m_textWidth,m_currentLine->bbox.xMax - m_currentLine->bbox.xMin);
+        m_textWidth = max(m_textWidth,static_cast<int>(m_currentLine->bbox.xMax - m_currentLine->bbox.xMin));
         m_textHeight += m_lineHeight;
     }
 }
@@ -579,10 +579,12 @@ unsigned char* CCFreeTypeFont::loadFont(const char *pFontName, unsigned long *si
         path += pFontName;
     }
 
+#if 0
     if (std::string::npos == lowerCase.find(".ttf"))
     {
         path += ".ttf";
     }
+#endif
 
 	std::string fullpath  = CCFileUtils::sharedFileUtils()->fullPathForFilename(path.c_str());
 	return CCFileUtils::sharedFileUtils()->getFileData(fullpath.c_str(), "rb", size);

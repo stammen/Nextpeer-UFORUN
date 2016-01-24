@@ -26,6 +26,9 @@ THE SOFTWARE.
 #ifndef __CC_EGLVIEW_WINRT_H__
 #define __CC_EGLVIEW_WINRT_H__
 
+#ifdef WINRT_UNIVERSAL
+#include "platform/win-8.1/CCEGLView-Win8_1.h"
+#else
 #include "CCStdC.h"
 #include "platform/CCCommon.h"
 #include "cocoa/CCGeometry.h"
@@ -37,9 +40,9 @@ THE SOFTWARE.
 #include <agile.h>
 #include <DirectXMath.h>
 
+#ifndef WINRT_UNIVERSAL
 #include "esUtil.h"
-
-using namespace Windows::Foundation;
+#endif
 
 NS_CC_BEGIN
 
@@ -87,7 +90,10 @@ private:
 	bool m_lastPointValid;
 	bool m_textInputEnabled;
 	Microsoft::WRL::ComPtr<IWinrtEglWindow> m_eglWindow;
+
+#ifndef WINRT_UNIVERSAL
 	ESContext m_esContext;
+#endif
 	Windows::UI::Xaml::Controls::TextBox^ m_textBox;
 	Windows::UI::Xaml::Controls::Button^ m_dummy;
 	Windows::Foundation::EventRegistrationToken m_pointerPressedEvent;
@@ -114,16 +120,12 @@ public:
 	void UpdateForWindowSizeChange();
 	void OnRendering();
     void OnSuspending();
-
-	void openEditBox(CCEditBoxParam^ param);
-	void SetCocosEditBoxHandler(EventHandler<Platform::Object^>^ handler);
-	void OnCloseEditBox();
 	
 private:
 	Windows::Foundation::EventRegistrationToken m_eventToken;
 	Windows::Foundation::Point m_lastPoint;
 	bool m_lastPointValid;
-	EventHandler<Platform::Object^>^ m_editBoxhandler;
+	Windows::Foundation::EventHandler<Platform::Object^>^ m_editBoxhandler;
 public:
 
     // winrt platform functions
@@ -159,5 +161,7 @@ private:
 };
 
 NS_CC_END
+
+#endif // WINRT_UNIVERSAL
 
 #endif    // end of __CC_EGLVIEW_WINRT_H__

@@ -10,7 +10,7 @@
 #include "LHObject.h"
 //------------------------------------------------------------------------------
 void LHArray::insertObjectsInVector(std::vector<std::string>* vec){
-    for(int i = 0; i< count(); ++i)
+    for(unsigned int i = 0; i< count(); ++i)
     {
         LHObject* obj = objectAtIndex(i);
         if(obj){
@@ -22,7 +22,7 @@ void LHArray::insertObjectsInVector(std::vector<std::string>* vec){
 }
 //------------------------------------------------------------------------------
 void LHArray::insertObjectsInVector(std::vector<float>* vec){
-    for(int i = 0; i< count(); ++i)
+    for(unsigned int i = 0; i< count(); ++i)
     {
         LHObject* obj = objectAtIndex(i);
         if(obj){
@@ -32,7 +32,7 @@ void LHArray::insertObjectsInVector(std::vector<float>* vec){
 }
 //------------------------------------------------------------------------------
 void LHArray::insertObjectsInVector(std::vector<bool>* vec){
-    for(int i = 0; i< count(); ++i)
+    for(unsigned int i = 0; i< count(); ++i)
     {
         LHObject* obj = objectAtIndex(i);
         if(obj){

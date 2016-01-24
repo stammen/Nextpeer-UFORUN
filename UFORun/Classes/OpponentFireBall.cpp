@@ -20,7 +20,7 @@
 OpponentFireBall::OpponentFireBall(uint32_t originPowerUpId, Opponent *fromOpponent, b2World* world) : FireBall(originPowerUpId, world) {
     
     _fromOpponent = fromOpponent;
-    _lastUpdateTime = 0.0f;
+    _lastUpdateTime = 0;
     _fireBallElapsedCounter = 0.0f;
     _lastScreenPosition = CCPointZero;
     

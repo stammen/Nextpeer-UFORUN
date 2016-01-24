@@ -188,7 +188,7 @@ void LHSprite::createFixturesFromInfoOnBody(){
             curFixture = tempNextFix;
         }
 
-        for(int i = 0; i< fixturesInfo->count(); ++i)
+        for(unsigned i = 0; i< fixturesInfo->count(); ++i)
         {
             
             LHDictionary* fixInfo = fixturesInfo->dictAtIndex(i);
@@ -451,7 +451,7 @@ void LHSprite::loadInformationFromDictionary(LHDictionary* dictionary){
     CCSprite::setPosition(ccp((int)position.x, (int)position.y));
     
     
-    CCSprite::setRotation(texDict->intForKey("Angle"));
+    CCSprite::setRotation((float)texDict->intForKey("Angle"));
     setColor(texDict->colorForKey("Color"));
     
 #if COCOS2D_VERSION >= 0x00020000
@@ -1044,7 +1044,7 @@ bool  LHSprite::removeBodyFromWorld(void){
 		{
             CCArray* list = jointList();
             if(list){
-                for(int i = 0; i < (int)list->count(); ++i){
+                for(unsigned i = 0; i < (int)list->count(); ++i){
                     LHJoint* jt = (LHJoint*)list->objectAtIndex(i);
                     if(jt){
                         jt->shouldDestroyJointOnDealloc = false;
@@ -1086,7 +1086,7 @@ CCArray* LHSprite::jointList(){
 LHJoint* LHSprite::jointWithUniqueName(const std::string& name){
     
     CCArray* list = jointList();
-    for(int i = 0; i< list->count(); ++i){
+    for(unsigned i = 0; i< list->count(); ++i){
         LHJoint* jt = (LHJoint*)list->objectAtIndex(i);
         
         if(jt->getUniqueName() == name){
@@ -1099,7 +1099,7 @@ LHJoint* LHSprite::jointWithUniqueName(const std::string& name){
 bool LHSprite::removeAllAttachedJoints(){
     CCArray* list = jointList();
     if(list){
-        for(int i = 0; i< list->count(); ++i){
+        for(unsigned i = 0; i< list->count(); ++i){
             LHJoint* jt = (LHJoint*)list->objectAtIndex(i);
             jt->removeSelf();
             return true;
@@ -1121,7 +1121,7 @@ void LHSprite::prepareMovementOnPathWithUniqueName(const std::string& pathName){
     CCArray* allLayers = LHSettings::sharedInstance()->getAllLHMainLayers();
     
     LHBezier* bezier = NULL;
-    for(int i = 0; i< allLayers->count(); ++i)
+    for(unsigned i = 0; i< allLayers->count(); ++i)
     {
         LHLayer* layer = (LHLayer*)allLayers->objectAtIndex(i);
     

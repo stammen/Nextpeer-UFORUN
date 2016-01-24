@@ -53,7 +53,7 @@ bool LHLayer::initWithDictionary(LHDictionary* dictionary){
     loadUserCustomInfoFromDictionary(dictionary->dictForKey("CustomClassInfo"));
     
     LHArray* childrenInfo = dictionary->arrayForKey("Children");
-    for(int i = 0; i< childrenInfo->count(); ++i){
+    for(unsigned int i = 0; i< childrenInfo->count(); ++i){
         LHDictionary* childDict = childrenInfo->dictAtIndex(i);
         addChildFromDictionary(childDict);
     }
@@ -124,7 +124,7 @@ void* LHLayer::userInfo(){
 //------------------------------------------------------------------------------
 LHLayer*    LHLayer::layerWithUniqueName(const std::string& name){
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         if(LHLayer::isLHLayer(node)){
             if(((LHLayer*)node)->getUniqueName() == name){
@@ -137,7 +137,7 @@ LHLayer*    LHLayer::layerWithUniqueName(const std::string& name){
 //------------------------------------------------------------------------------
 LHBatch*    LHLayer::batchWithUniqueName(const std::string& name){
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         if(LHBatch::isLHBatch(node)){
             if(((LHBatch*)node)->getUniqueName() == name){
@@ -156,7 +156,7 @@ LHBatch*    LHLayer::batchWithUniqueName(const std::string& name){
 LHSprite*   LHLayer::spriteWithUniqueName(const std::string& name){
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         if(LHSprite::isLHSprite(node)){
             if(((LHSprite*)node)->getUniqueName() == name){
@@ -179,7 +179,7 @@ LHSprite*   LHLayer::spriteWithUniqueName(const std::string& name){
 //------------------------------------------------------------------------------
 LHBezier*   LHLayer::bezierWithUniqueName(const std::string& name){
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         if(LHBezier::isLHBezier(node)){
             if(((LHBezier*)node)->getUniqueName() == name)
@@ -202,7 +202,7 @@ CCArray*    LHLayer::allLayers(void){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         if(LHLayer::isLHLayer(node)){
             array->addObject(node);
@@ -218,7 +218,7 @@ CCArray*    LHLayer::allBatches(void){
     CCArray* array = CCArray::array();
 #endif
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         
         if(LHBatch::isLHBatch(node)){
@@ -238,7 +238,7 @@ CCArray*    LHLayer::allSprites(void){
     CCArray* array = CCArray::array();
 #endif
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         
         if(LHSprite::isLHSprite(node)){
@@ -262,7 +262,7 @@ CCArray*    LHLayer::allBeziers(void){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHBezier::isLHBezier(node)){
@@ -284,7 +284,7 @@ CCArray*    LHLayer::layersWithTag(int tag){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHLayer::isLHLayer(node)){
@@ -303,7 +303,7 @@ CCArray*    LHLayer::batchesWithTag(int tag){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHBatch::isLHBatch(node)){
@@ -325,7 +325,7 @@ CCArray*    LHLayer::spritesWithTag(int tag){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         
         if(LHSprite::isLHSprite(node)){
@@ -350,7 +350,7 @@ CCArray* LHLayer::beziersWithTag(int tag){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
         
         if(LHBezier::isLHBezier(node)){

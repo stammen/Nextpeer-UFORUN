@@ -295,13 +295,13 @@ void LHBezier::initTileVerticesFromDictionary(LHDictionary* dictionary,
     
     if(NULL != fixtures)
     {
-        for(int i = 0; i < fixtures->count(); ++i)
+        for(unsigned int i = 0; i < fixtures->count(); ++i)
         {
             LHArray* fix = fixtures->arrayAtIndex(i);
         
             std::vector<CCPoint> triagle;
         
-            for(int j = 0; j < fix->count(); ++j)
+            for(unsigned int j = 0; j < fix->count(); ++j)
             {
                 CCPoint point = fix->pointAtIndex(j);
 			
@@ -319,7 +319,7 @@ void LHBezier::initTileVerticesFromDictionary(LHDictionary* dictionary,
 		
 		int MAX_STEPS = 25;
 		
-        for(int i = 0; i < curvesInShape->count(); ++i)
+        for(unsigned int i = 0; i < curvesInShape->count(); ++i)
 		{
             LHDictionary* curvDict = curvesInShape->dictAtIndex(i);
             
@@ -374,7 +374,7 @@ void LHBezier::initPathPointsFromDictionary(LHDictionary* bezierDict)
 //	CCPoint conv = LHSettings::sharedInstance()->convertRatio();
 	
 	int i = 0;
-    for(int j = 0; j < curvesInShape->count(); ++j)
+    for(unsigned int j = 0; j < curvesInShape->count(); ++j)
     {
         LHDictionary* curvDict = curvesInShape->dictAtIndex(j);
         
@@ -622,7 +622,7 @@ void LHBezier::draw(void)
     
     delete[] points;
     
-    bool wasBlend = glIsEnabled(GL_BLEND);
+    bool wasBlend = static_cast<bool>(glIsEnabled(GL_BLEND));
     glEnable(GL_BLEND);
     
     for(int b = 0; b < (int)blendingTextures.size(); ++b)

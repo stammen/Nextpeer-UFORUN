@@ -31,7 +31,7 @@ bool LHNode::initWithDictionary(LHDictionary* dictionary){
     LHArray* childrenInfo = dictionary->arrayForKey("Children");
     
     if(childrenInfo)
-    for(int i = 0; i < childrenInfo->count(); ++i)
+    for(unsigned i = 0; i < childrenInfo->count(); ++i)
     {
         LHDictionary* childDict = childrenInfo->dictAtIndex(i);
 
@@ -115,7 +115,7 @@ bool LHNode::removeBodyFromWorld(){
 		b2World* _world = body->GetWorld();
 		if(0 != _world){
             CCArray* list = jointList();
-            for(int i = 0; i < list->count(); ++i){
+            for(unsigned i = 0; i < list->count(); ++i){
                 LHJoint* jt = (LHJoint*)list->objectAtIndex(i);
                 jt->setShouldDestroyJointOnDealloc(false);
                 jt->removeSelf();

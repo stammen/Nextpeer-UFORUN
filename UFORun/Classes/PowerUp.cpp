@@ -24,7 +24,7 @@ PowerUpType PowerUp::randomizePowerUpType() {
     // int powerUpPercent = nextpeer::Rand::generate() % RANDOM_FULL_PERCENT;
     
     // Use the Cocos2d-x random function to mis the powerups across devices.
-    int powerUpPercent = CCRANDOM_0_1() * RANDOM_FULL_PERCENT;
+    int powerUpPercent = (int)(CCRANDOM_0_1() * RANDOM_FULL_PERCENT);
     
     if (powerUpPercent <= RANDOM_FULL_PERCENT * RANDOM_POWER_UP_FIRE_PERCENT) {
         return kPowerUpFireBall;

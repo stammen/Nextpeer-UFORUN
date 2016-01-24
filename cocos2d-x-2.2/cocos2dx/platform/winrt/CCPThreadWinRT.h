@@ -28,6 +28,7 @@ THE SOFTWARE.
 
 #include "platform/CCPlatformMacros.h"
 
+#define NOMINMAX
 #include <Windows.h>
 #include <thread>
 #include <functional>
@@ -39,6 +40,9 @@ NS_CC_BEGIN
 typedef std::shared_ptr<std::thread>  pthread_t;
 typedef std::mutex pthread_mutex_t;
 typedef int pthread_cond_t;
+
+#define THREAD_VOID void*
+#define THREAD_RETURN NULL
 
 typedef struct  
 {
@@ -61,7 +65,7 @@ int pthread_attr_init(pthread_attr_t *attr);
 template<class T>
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, T start, void *arg)
 {
-    std::shared_ptr<std::thread> t(new std::thread(start));
+    std::shared_ptr<std::thread> t(new std::thread(start, arg));
     (*thread).swap(t);
     return 0;
 }

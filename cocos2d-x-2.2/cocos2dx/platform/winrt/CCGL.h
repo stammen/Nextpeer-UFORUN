@@ -26,6 +26,24 @@ THE SOFTWARE.
 #ifndef __CCGL_H__
 #define __CCGL_H__
 
+#define GL_BGRA						GL_BGRA_EXT
+#define	glClearDepth				glClearDepthf
+#define GL_WRITE_ONLY				GL_WRITE_ONLY_OES
+
+#ifdef WINRT_UNIVERSAL
+#include "EGL/egl.h"
+#include "EGL/eglext.h"
+#include "EGL/eglplatform.h"
+#include "GLES2/gl2.h"
+#include "GLES2/gl2ext.h"
+#include "GLES3/gl3.h"
+
+#define glMapBuffer                 glMapBufferOES
+
+#else
 #include "CCGL_Angle.h"
+#endif
+
+
 
 #endif // __CCGL_H__

@@ -53,7 +53,7 @@ LHParallaxNode::~LHParallaxNode(void){
         
         tempSprites->addObjectsFromArray(sprites);
     
-        for(int i = 0; i< tempSprites->count(); ++i)
+        for(unsigned int i = 0; i< tempSprites->count(); ++i)
         {        
             LHParallaxPointObject* pt = (LHParallaxPointObject*)tempSprites->objectAtIndex(i);
             if(pt->ccsprite){
@@ -180,7 +180,7 @@ void LHParallaxNode::removeChild(LHSprite* sprite)
     if(NULL == sprite) 
         return;
     
-    for(int i = 0; i< sprites->count(); ++i){        
+    for(unsigned int i = 0; i< sprites->count(); ++i){        
         LHParallaxPointObject* pt = (LHParallaxPointObject*)sprites->objectAtIndex(i);
 	
         if(pt->ccsprite == sprite){
@@ -206,7 +206,7 @@ CCArray* LHParallaxNode::spritesInNode(void)
     CCArray* sprs = CCArray::array();
 #endif
     
-    for(int i = 0; i < sprites->count(); ++i)
+    for(unsigned int i = 0; i < sprites->count(); ++i)
     {
         LHParallaxPointObject* pt = (LHParallaxPointObject*)sprites->objectAtIndex(i);
         if(NULL != pt->ccsprite)
@@ -219,7 +219,7 @@ std::vector<b2Body*> LHParallaxNode::bodiesInNode(void){
     
     std::vector<b2Body*> sprs;
     
-    for(int i = 0; i < sprites->count(); ++i){
+    for(unsigned int i = 0; i < sprites->count(); ++i){
         LHParallaxPointObject* pt = (LHParallaxPointObject*)sprites->objectAtIndex(i);
         if(NULL != pt->body)
             sprs.push_back(pt->body);
@@ -491,12 +491,12 @@ void LHParallaxNode::tick(float dt)
 	{
         float   frameTime = dt;//[[NSDate date] timeIntervalSince1970] - time;
         
-        for(int j = 0; j< sprites->count(); ++j){
+        for(unsigned int i, j = 0; j< sprites->count(); ++j){
             LHParallaxPointObject* point = (LHParallaxPointObject*)sprites->objectAtIndex(j);
         
-		    i = -1.0f; //direction left to right //bottom to up
+		    i = -1; //direction left to right //bottom to up
             if(direction == 1 || direction == 2) //right to left //up to bottom
-                i = 1.0f;
+                i = 1;
             
             LHSprite* spr = (LHSprite*)point->ccsprite;
             CCPoint oldPos = spr->getPosition();

@@ -61,7 +61,7 @@ public:
     
     cocos2d::ccColor3B  colorForKey(const std::string& key){
         CCRect rect = CCRectFromString(this->valueForKey(key)->getCString());
-        return ccc3(rect.origin.x*255.0f, rect.origin.y*255.0f, rect.size.width*255.0f);
+        return ccc3((GLubyte)(rect.origin.x*255.0f), (GLubyte)(rect.origin.y*255.0f), (GLubyte)(rect.size.width*255.0f));
     }
     
     CCSize sizeForKey(const std::string& key){

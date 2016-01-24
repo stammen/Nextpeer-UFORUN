@@ -123,7 +123,7 @@ bool LHBatch::initWithDictionary(LHDictionary* dictionary,  LHLayer* layer){
     LHArray* childrenInfo = dictionary->arrayForKey("Children");
     if(childrenInfo)
     {
-        for(int i = 0; i< childrenInfo->count(); ++i){
+        for(unsigned int i = 0; i< childrenInfo->count(); ++i){
             LHDictionary* childDict = childrenInfo->dictAtIndex(i);
             addChildFromDictionary(childDict);
         }
@@ -174,7 +174,7 @@ LHBatch* LHBatch::batchWithSheetName(const std::string& sheetName,
 LHSprite* LHBatch::spriteWithUniqueName(const std::string& name){
 
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHSprite::isLHSprite(node)){
@@ -193,7 +193,7 @@ CCArray* LHBatch::allSprites(){
     CCArray* array = CCArray::array();
 #endif
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHSprite::isLHSprite(node)){
@@ -211,7 +211,7 @@ CCArray* LHBatch::spritesWithTag(int tag){
 #endif
     
     CCArray* children = getChildren();
-    for(int i = 0; i < children->count(); ++i){
+    for(unsigned int i = 0; i < children->count(); ++i){
         CCNode* node = (CCNode*)children->objectAtIndex(i);
 
         if(LHSprite::isLHSprite(node)){

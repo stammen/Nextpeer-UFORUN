@@ -224,7 +224,7 @@ void LHPathNode::setStartAtEndPoint(bool val){
 float LHPathNode::rotationDegreeFromPoint(CCPoint endPoint, CCPoint startPoint)
 {
 	float rotateDegree = atan2(fabs(endPoint.x-startPoint.x),
-							   fabs(endPoint.y-startPoint.y)) * 180.0f / M_PI;
+							   fabs(endPoint.y-startPoint.y)) * 180.0f / (float)M_PI;
 	if (endPoint.y>=startPoint.y)
 	{
 		if (endPoint.x>=startPoint.x){
@@ -238,7 +238,7 @@ float LHPathNode::rotationDegreeFromPoint(CCPoint endPoint, CCPoint startPoint)
 		if (endPoint.x<=startPoint.x){
 		}
 		else{
-			rotateDegree = 360.0 - rotateDegree;
+			rotateDegree = 360.0f - rotateDegree;
 		}
 	}
 	return rotateDegree;

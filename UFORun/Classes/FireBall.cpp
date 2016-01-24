@@ -44,7 +44,7 @@ void FireBall::buildFireBallBody(b2World* world) {
     bodyDef.position.Set(worldPosition.x, worldPosition.y);
     
     b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(0.3, 0.3);
+    dynamicBox.SetAsBox(0.3f, 0.3f);
     
     //fixture definition
     b2FixtureDef fixtureDef;

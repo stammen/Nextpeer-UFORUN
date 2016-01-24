@@ -39,8 +39,10 @@ THE SOFTWARE.
     #define isnan   _isnan
 #endif
 
+#if 0
 #ifndef snprintf
 #define snprintf _snprintf
+#endif
 #endif
 
 #include <math.h>
@@ -51,9 +53,17 @@ THE SOFTWARE.
 #include <time.h>
 
 // for MIN MAX and sys/time.h on win32 platform
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
 
-#define MIN     min
-#define MAX     max
+#ifndef MIN
+#define MIN(x,y) (((x) > (y)) ? (y) : (x))
+#endif  // MIN
+
+#ifndef MAX
+#define MAX(x,y) (((x) < (y)) ? (y) : (x))
+#endif  // MAX
 
 #if _MSC_VER >= 1600
     #include <stdint.h>
@@ -68,7 +78,7 @@ typedef int ssize_t;
 
 #define _WINSOCKAPI_
 // Structure timeval has define in winsock.h, include windows.h for it.
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WP8
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WP8 || defined(WINRT_UNIVERSAL)
 #include <WinSock2.h>
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
 #include <Windows.h>

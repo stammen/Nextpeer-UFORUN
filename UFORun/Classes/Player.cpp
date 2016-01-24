@@ -203,7 +203,7 @@ void Player::showShieldAnimation() {
     _playerAnimationNode->stopAllActions();
     _playerAnimationNode->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("shield.png"));
     _playerAnimationNode->setVisible(true); // Make sure the node is visible
-    _playerAnimationNode->runAction(CCRepeatForever::create(CCBox2DPhysicsRotateBy::create(0.1, 10)));
+    _playerAnimationNode->runAction(CCRepeatForever::create(CCBox2DPhysicsRotateBy::create(0.1f, 10)));
 }
 
 void Player::showSpeedBoostAnimation() {

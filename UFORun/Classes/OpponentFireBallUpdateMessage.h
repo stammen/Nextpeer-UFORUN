@@ -13,6 +13,15 @@
 #include "MessageParser.h"
 #include "HeroFireBall.h"
 
+#ifdef WINRT
+typedef struct {
+    MultiplayerMessageHeader header;
+
+    uint32_t originPowerUpId; // The power up box that this fire ball came from. Power up boxes number with sequence 1..X (X number of power ups in the level)
+    float worldPositionX; // The world X position of the fire ball
+    float worldPositionY; // The world Y position of the fire ball
+} OpponentFireBallUpdateMessageStruct;
+#else
 typedef struct __attribute__ ((__packed__)) {
     MultiplayerMessageHeader header;
     
@@ -20,6 +29,7 @@ typedef struct __attribute__ ((__packed__)) {
     float worldPositionX; // The world X position of the fire ball
     float worldPositionY; // The world Y position of the fire ball
 } OpponentFireBallUpdateMessageStruct;
+#endif
 
 /**
  The last known update from an opponent fire ball.

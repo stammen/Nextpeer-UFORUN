@@ -16,8 +16,8 @@ b2Vec2 LHFixture::transformPoint(CCPoint point, LHSprite* sprite, CCPoint offset
 {
     float ptm = LHSettings::sharedInstance()->lhPtmRatio();
     
-    int flipx = sprite->isFlipX() ? -1.f : 1.f;
-    int flipy = sprite->isFlipY() ? -1.f : 1.f;    
+    int flipx = sprite->isFlipX() ? -1 : 1;
+    int flipy = sprite->isFlipY() ? -1 : 1;    
     
     point.x *= scale.x*flipx;
     point.y *= scale.y*flipy;
@@ -69,7 +69,7 @@ bool LHFixture::initWithDictionary(LHDictionary* dictionary,b2Body* body, LHSpri
     
     if(fixturePoints && fixturePoints->count() > 0 && fixturePoints->arrayAtIndex(0)->count() > 0)
     {
-        for(int f = 0; f < fixturePoints->count(); ++f)
+        for(unsigned int f = 0; f < fixturePoints->count(); ++f)
         {
             LHArray* fixInfo = fixturePoints->arrayAtIndex(f);
 //

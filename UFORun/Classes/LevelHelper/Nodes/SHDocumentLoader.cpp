@@ -49,7 +49,7 @@ bool SHSceneNode::initSceneNodeWithContentOfFile(const std::string& sceneFile){
     
     LHArray* sheetsList = dictionary->arrayForKey("SHEETS_INFO");
     
-    for(int i = 0; i < sheetsList->count(); ++i){
+    for(unsigned int i = 0; i < sheetsList->count(); ++i){
         LHDictionary* dic = sheetsList->dictAtIndex(i);
         sheets->setObject(dic, dic->stringForKey("SheetName"));
     }
@@ -57,7 +57,7 @@ bool SHSceneNode::initSceneNodeWithContentOfFile(const std::string& sceneFile){
     
     LHArray* animList = dictionary->arrayForKey("SH_ANIMATIONS_LIST");
     
-    for(int i = 0; i< animList->count(); ++i){
+    for(unsigned int i = 0; i< animList->count(); ++i){
         
         LHDictionary* dic = animList->dictAtIndex(i);
         animations->setObject(dic, dic->stringForKey("UniqueName"));

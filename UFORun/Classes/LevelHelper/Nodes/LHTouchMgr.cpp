@@ -148,7 +148,7 @@ void LHTouchMgr::removeTouchBeginObserver(CCObject* observer){
     CCArray* keys = onTouchBeginOnSpriteOfTag.allKeys();
 
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned i = 0; i < keys->count(); ++i){
             
             LHObserverPair* pair = (LHObserverPair*)onTouchBeginOnSpriteOfTag.objectForKey(((CCInteger*)keys->objectAtIndex(i))->getValue());
             
@@ -161,7 +161,7 @@ void LHTouchMgr::removeTouchBeginObserver(CCObject* observer){
 #else
     
     std::vector<int> keys = onTouchBeginOnSpriteOfTag.allKeys();
-    for(int i = 0; i < keys.size(); ++i){
+    for(unsigned i = 0; i < keys.size(); ++i){
        LHObserverPair* pair = (LHObserverPair*)onTouchBeginOnSpriteOfTag.objectForKey(keys[i]);
 
         if(pair->object == observer){
@@ -182,7 +182,7 @@ void LHTouchMgr::removeTouchMovedObserver(CCObject* observer){
     CCArray* keys = onTouchMovedOnSpriteOfTag.allKeys();
     
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned i = 0; i < keys->count(); ++i){
             
             LHObserverPair* pair = (LHObserverPair*)onTouchMovedOnSpriteOfTag.objectForKey(((CCInteger*)keys->objectAtIndex(i))->getValue());
             
@@ -195,7 +195,7 @@ void LHTouchMgr::removeTouchMovedObserver(CCObject* observer){
 #else
     
     std::vector<int> keys = onTouchMovedOnSpriteOfTag.allKeys();
-    for(int i = 0; i < keys.size(); ++i){
+    for(unsigned i = 0; i < keys.size(); ++i){
         LHObserverPair* pair = (LHObserverPair*)onTouchMovedOnSpriteOfTag.objectForKey(keys[i]);
         
         if(pair->object == observer){
@@ -210,7 +210,7 @@ void LHTouchMgr::removeTouchEndedObserver(CCObject* observer){
     CCArray* keys = onTouchEndedOnSpriteOfTag.allKeys();
     
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned i = 0; i < keys->count(); ++i){
             
             LHObserverPair* pair = (LHObserverPair*)onTouchEndedOnSpriteOfTag.objectForKey(((CCInteger*)keys->objectAtIndex(i))->getValue());
             
@@ -223,7 +223,7 @@ void LHTouchMgr::removeTouchEndedObserver(CCObject* observer){
 #else
     
     std::vector<int> keys = onTouchEndedOnSpriteOfTag.allKeys();
-    for(int i = 0; i < keys.size(); ++i){
+    for(unsigned i = 0; i < keys.size(); ++i){
         LHObserverPair* pair = (LHObserverPair*)onTouchEndedOnSpriteOfTag.objectForKey(keys[i]);
         
         if(pair->object == observer){

@@ -147,7 +147,7 @@ void LHSettings::removeMarkedNodes(){
     
     CCArray* keys = markedNodes.allKeys();
     if(keys){
-        for(int i = 0; i < keys->count(); ++i){
+        for(unsigned i = 0; i < keys->count(); ++i){
             LHNode* node = (LHNode*)markedNodes.objectForKey(((CCString*)keys->objectAtIndex(i))->getCString());
             removeMarkedNode(node);
         }
@@ -157,7 +157,7 @@ void LHSettings::removeMarkedNodes(){
 #else
     
     std::vector<std::string> keys = markedNodes.allKeys();
-    for(int i = 0; i < keys.size(); ++i){
+    for(unsigned i = 0; i < keys.size(); ++i){
         LHNode* node = (LHNode*)markedNodes.objectForKey(keys[i]);
         removeMarkedNode(node);
     }

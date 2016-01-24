@@ -215,7 +215,7 @@ LHAnimationNode::LHAnimationNode(LHDictionary* dictionary, LHSprite* spr, std::s
     
     frames->retain();
     
-    for(int i = 0; i< framesInfo->count(); ++i){
+    for(unsigned int i = 0; i< framesInfo->count(); ++i){
         
         LHDictionary* frmInfo = framesInfo->dictAtIndex(i);
         frames->addObject(LHAnimationFrameInfo::frameWithDictionary(frmInfo, sprite));
@@ -486,7 +486,7 @@ void LHAnimationNode::setOldRect(CCRect r){
 //------------------------------------------------------------------------------
 float LHAnimationNode::totalTime(){
     float t = 0.0f;
-    for(int i = 0; i < frames->count(); ++i)
+    for(unsigned int i = 0; i < frames->count(); ++i)
     {
         LHAnimationFrameInfo* frm = (LHAnimationFrameInfo*)frames->objectAtIndex(i);
         t += delayPerUnit*frm->getDelayPerUnit();

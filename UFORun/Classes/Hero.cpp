@@ -87,7 +87,7 @@ void Hero::addFootSensor() {
     b2PolygonShape dynamicBox;
     b2FixtureDef fixtureDef;
     
-    dynamicBox.SetAsBox(0.3, 0.3, b2Vec2(0,-2), 0);
+    dynamicBox.SetAsBox(0.3f, 0.3f, b2Vec2(0,-2), 0);
     
     //fixture definition
     fixtureDef.shape = &dynamicBox;
@@ -130,7 +130,7 @@ void Hero::update (float dt)
                 _state = kHeroStopped;
             }
             else {
-                currentLinearVel.x = currentLinearVel.x-0.1; // gradually decrease the speed till stop
+                currentLinearVel.x = currentLinearVel.x-0.1f; // gradually decrease the speed till stop
                 playerBody->SetLinearVelocity(currentLinearVel);
             }
         }
@@ -220,7 +220,7 @@ void Hero::useShieldPowerUp() {
     this->scheduleOnce(schedule_selector(Hero::powerUpUsageFinished), SHIELD_POWER_UP_TIMEOUT);
 }
 
-void Hero::powerUpUsageFinished() {
+void Hero::powerUpUsageFinished(float dt) {
     stopPlayerEffectAnimation();
     _speedX = PLAYER_DEFAULT_LINEAR_SPEED_X; // restore speed
     _powerUpState = kHeroPowerUpStateNone;
@@ -237,7 +237,7 @@ void Hero::hitByFireBall() {
     this->scheduleOnce(schedule_selector(Hero::hurtAnimationFinished), HURT_BY_FIRE_BALL_TIMEOUT);
 }
 
-void Hero::hurtAnimationFinished() {
+void Hero::hurtAnimationFinished(float dt) {
     stopPlayerEffectAnimation();
     _isHurt = false;
     _speedX = PLAYER_DEFAULT_LINEAR_SPEED_X;

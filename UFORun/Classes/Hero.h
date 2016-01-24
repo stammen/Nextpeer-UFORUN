@@ -53,8 +53,8 @@ private:
     void addCurrentUserMarker();
     void addFootSensor();
     void move();
-    void powerUpUsageFinished();
-    void hurtAnimationFinished();
+    void powerUpUsageFinished(float dt);
+    void hurtAnimationFinished(float dt);
     
 protected:
 	Hero(GamePlayerProfile *profile, b2World* world, PlayerData *data);

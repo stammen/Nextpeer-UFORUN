@@ -29,11 +29,14 @@
 #include "cocos2d.h"
 #include "ExtensionMacros.h"
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT) && (CC_TARGET_PLATFORM != CC_PLATFORM_WP8)
 #include <string>
 #include <curl/curl.h>
-#include <pthread.h>
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+    #include "CCPThreadWinRT.h"
+#else
+    #include <pthread.h>
+#endif
 NS_CC_EXT_BEGIN
 
 class AssetsManagerDelegateProtocol;
@@ -217,5 +220,4 @@ public:
 };
 
 NS_CC_EXT_END;
-#endif // CC_TARGET_PLATFORM != CC_PLATFORM_WINRT
 #endif /* defined(__AssetsManager__) */

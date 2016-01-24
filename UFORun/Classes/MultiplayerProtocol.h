@@ -10,13 +10,19 @@
 #define UFORun_MultiplayerProtocol_h
 
 #define PROTOCOL_VERSION 1
-
+#ifdef WINRT
+typedef struct {
+    uint32_t protocolVersion;
+    uint32_t messageType;
+    float timeStamp;
+} MultiplayerMessageHeader;
+#else
 typedef struct __attribute__ ((__packed__)) {
     uint32_t protocolVersion;
     uint32_t messageType;
     float timeStamp;
-    
 } MultiplayerMessageHeader;
+#endif
 
 typedef enum {
     MULTIPLAYER_MESSAGE_TYPE_UNKNOWN = 0,

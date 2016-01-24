@@ -66,10 +66,10 @@ void SimulatedOpponent::applyHurtUpdate(OpponentUpdate* update) {
     // Keep track on the time since we started the hurt effect so extra messages will not make the opponent simulate hurt one more time.
     if (update->getIsHurt() && (_timeSinceHurtForward > HURT_BY_FIRE_BALL_TIMEOUT)) {
         // Fast forward will take place on all connected devices. Make sure to tell the server to fast forward relative to the amount of live players (still connected).
-        CCNextpeer::getInstance()->requestFastForwardRecording(getPlayerData()->getPlayerId().c_str(), HURT_BY_FIRE_BALL_TIMEOUT/_countOfLivePlayers);
+        CCNextpeer::getInstance()->requestFastForwardRecording(getPlayerData()->getPlayerId().c_str(), (uint32_t)(HURT_BY_FIRE_BALL_TIMEOUT/_countOfLivePlayers));
         
         float scoreUpdate = _lastUpdateDistanceWorldPositionX*HURT_BY_FIRE_BALL_TIMEOUT/_countOfLivePlayers;
-        CCNextpeer::getInstance()->reportScoreModifierForRecording(getPlayerData()->getPlayerId().c_str(), scoreUpdate);
+        CCNextpeer::getInstance()->reportScoreModifierForRecording(getPlayerData()->getPlayerId().c_str(), (int32_t)scoreUpdate);
         
         // Make sure to adjuts the clock with the time we just fast forwarded (otherwise the messages will be out of sync)
         _gameClockOffset += HURT_BY_FIRE_BALL_TIMEOUT;
@@ -99,12 +99,12 @@ void SimulatedOpponent::simulateHitByFireBallIfRequired(){
     CCNextpeer::getInstance()->requestPauseRecording(getPlayerData()->getPlayerId().c_str());
     this->scheduleOnce(schedule_selector(SimulatedOpponent::hurtAnimationFinished), HURT_BY_FIRE_BALL_TIMEOUT);
     
-    CCNextpeer::getInstance()->reportScoreModifierForRecording(getPlayerData()->getPlayerId().c_str(), -scoreDelta);
+    CCNextpeer::getInstance()->reportScoreModifierForRecording(getPlayerData()->getPlayerId().c_str(), (int32_t)-scoreDelta);
     
     showPlayerEffectAnimation(kPlayerEffectAnimationHurt);
 }
 
-void SimulatedOpponent::hurtAnimationFinished(){
+void SimulatedOpponent::hurtAnimationFinished(float dt){
     stopPlayerEffectAnimation();
     
     // Resume the recording (hurt timeout finished)

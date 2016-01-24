@@ -16,7 +16,24 @@
 #include "NextpeerNotifications.h"
 using namespace nextpeer;
 
+#ifdef WINRT
+typedef struct {
+    MultiplayerMessageHeader header;
 
+    float worldPositionX; // The world X position of the opponent
+    float worldPositionY; // The world Y position of the opponent
+
+                          // Forces that apply at the time of the update
+    float linearVelocityX; // The linear velocity on the X axe of the opponent
+    float linearVelocityY; // The linear velocity on the Y axe of the opponen
+
+    bool isStuck; // Does the opponent stuck in an obstacle
+    bool isHurt; // Does the opponent showing an hurt animation - got hit by a fireball
+    uint32_t state; // The current state of the opponent (Running/Stopped)
+    uint32_t powerUpState; // The current state of the opponent’s power up, does the shield turned on?
+
+} OpponentUpdateMessageStruct;
+#else
 typedef struct __attribute__ ((__packed__)) {
     MultiplayerMessageHeader header;
     
@@ -33,6 +50,7 @@ typedef struct __attribute__ ((__packed__)) {
     uint32_t powerUpState; // The current state of the opponent’s power up, does the shield turned on?
     
 } OpponentUpdateMessageStruct;
+#endif
 
 /**
  The last known update from an opponent, from state to location.

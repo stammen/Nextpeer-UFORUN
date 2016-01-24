@@ -28,7 +28,7 @@ private:
     float _gameClockOffset;
     unsigned int _countOfLivePlayers;
     
-    void hurtAnimationFinished();
+    void hurtAnimationFinished(float dt);
 protected:
     SimulatedOpponent(unsigned int countOfLivePlayers, GamePlayerProfile *profile, b2World* world, PlayerData *data);
     

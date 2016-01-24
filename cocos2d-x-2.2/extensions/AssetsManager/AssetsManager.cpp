@@ -25,14 +25,13 @@
 #include "AssetsManager.h"
 #include "cocos2d.h"
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT) && (CC_TARGET_PLATFORM != CC_PLATFORM_WP8)
 #include <curl/curl.h>
 #include <curl/easy.h>
 
 #include <stdio.h>
 #include <vector>
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32 && CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
@@ -350,7 +349,7 @@ bool AssetsManager::uncompress()
  */
 bool AssetsManager::createDirectory(const char *path)
 {
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32 && CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
     mode_t processMask = umask(0);
     int ret = mkdir(path, S_IRWXU | S_IRWXG | S_IRWXO);
     umask(processMask);
@@ -609,4 +608,3 @@ void AssetsManager::Helper::handleUpdateSucceed(Message *msg)
 }
 
 NS_CC_EXT_END;
-#endif // CC_PLATFORM_WINRT

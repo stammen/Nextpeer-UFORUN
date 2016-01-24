@@ -137,9 +137,9 @@ void MainMenuLayer::createScreen () {
         // Animation to hide the moon/earth and show the avatar selection controls
         earth->runAction(CCSpawn::create(CCMoveTo::create(1.5f, ccp(-earth->getContentSize().width, earth->getPositionY())), CCFadeOut::create(1.4f), NULL));
         moon->runAction(CCSpawn::create(CCMoveTo::create(1.5f, ccp(_screenSize.width + moon->getContentSize().width, moon->getPositionY())), CCFadeOut::create(1.4f), NULL));
-        _selectedAvatar->runAction(CCSequence::create(CCDelayTime::create(0.1), CCFadeIn::create(0.4f), NULL));
-        _menuAvatarSelectionRight->runAction(CCSequence::create(CCDelayTime::create(0.2), CCFadeIn::create(0.3f), NULL));
-        _menuAvatarSelectionLeft->runAction(CCSequence::create(CCDelayTime::create(0.2), CCFadeIn::create(0.3f), NULL));
+        _selectedAvatar->runAction(CCSequence::create(CCDelayTime::create(0.1f), CCFadeIn::create(0.4f), NULL));
+        _menuAvatarSelectionRight->runAction(CCSequence::create(CCDelayTime::create(0.2f), CCFadeIn::create(0.3f), NULL));
+        _menuAvatarSelectionLeft->runAction(CCSequence::create(CCDelayTime::create(0.2f), CCFadeIn::create(0.3f), NULL));
     }
     
     // Open Nextpeer
