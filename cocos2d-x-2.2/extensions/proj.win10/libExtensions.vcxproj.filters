@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AssetsManager">
+      <UniqueIdentifier>{42ebb450-6844-4965-bd1a-44fda9ddae42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CCBReader">
+      <UniqueIdentifier>{1c6ec014-820b-4946-9252-8ef8f0988b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{30db000e-819a-4cac-8470-c5219ac5dfac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\CCControlExtension">
+      <UniqueIdentifier>{70ab0fe6-5bd2-4b58-9b7b-4a6d8b6ff2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\CCEditBox">
+      <UniqueIdentifier>{5ae66370-4531-4413-890d-762a740c7c50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\CCScrollView">
+      <UniqueIdentifier>{ecd85d0c-b52d-4627-b33b-3cb5824e59dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{fd584258-ae82-4a1a-a524-3b979d8fdf59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics_nodes">
+      <UniqueIdentifier>{ee0bdcef-d60d-43ab-8015-465ea2ed1825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spine">
+      <UniqueIdentifier>{ad6441c2-de0a-4884-85d6-48a4daed8114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="winrt">
+      <UniqueIdentifier>{c0ce9368-7d46-4035-9944-d829ccc5bcdc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AssetsManager\AssetsManager.cpp">
+      <Filter>AssetsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBAnimationManager.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBFileLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBKeyframe.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBReader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBSequence.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBSequenceProperty.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCBValue.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCControlButtonLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCControlLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCData.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCLabelBMFontLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCLabelTTFLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCLayerColorLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCLayerGradientLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCLayerLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCMenuItemImageLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCMenuItemLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCNode+CCBRelativePositioning.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCNodeLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCNodeLoaderLibrary.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCParticleSystemQuadLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCScale9SpriteLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCScrollViewLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCBReader\CCSpriteLoader.cpp">
+      <Filter>CCBReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControl.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlButton.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlColourPicker.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlHuePicker.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlPotentiometer.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlSlider.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlStepper.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlSwitch.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCControlUtils.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCInvocation.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCControlExtension\CCScale9Sprite.cpp">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCEditBox\CCEditBox.cpp">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCScrollView\CCScrollView.cpp">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCScrollView\CCSorting.cpp">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCScrollView\CCTableView.cpp">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCScrollView\CCTableViewCell.cpp">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\network\HttpClient.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\network\WebSocketWinRT.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\physics_nodes\CCPhysicsDebugNode.cpp">
+      <Filter>physics_nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\physics_nodes\CCPhysicsSprite.cpp">
+      <Filter>physics_nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Animation.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\AnimationState.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\AnimationStateData.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Atlas.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\AtlasAttachmentLoader.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Attachment.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\AttachmentLoader.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Bone.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\BoneData.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\CCSkeleton.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\CCSkeletonAnimation.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\extension.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Json.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\RegionAttachment.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Skeleton.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\SkeletonData.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\SkeletonJson.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Skin.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\Slot.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\SlotData.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\spine\spine-cocos2dx.cpp">
+      <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cocos2dx\platform\winrt\CCPThreadWinRT.cpp">
+      <Filter>winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCEditBox\CCEditBoxImplWinrt.cpp">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\CCEditBox\UIEditBoxImpl-winrt.cpp">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AssetsManager\AssetsManager.h">
+      <Filter>AssetsManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBAnimationManager.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBFileLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBKeyframe.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBMemberVariableAssigner.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBReader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBSelectorResolver.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBSequence.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBSequenceProperty.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCBValue.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCControlButtonLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCControlLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCData.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCLabelBMFontLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCLabelTTFLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCLayerColorLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCLayerGradientLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCLayerLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCMenuItemImageLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCMenuItemLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCMenuLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCNode+CCBRelativePositioning.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCNodeLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCNodeLoaderLibrary.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCNodeLoaderListener.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCParticleSystemQuadLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCScale9SpriteLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCScrollViewLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCBReader\CCSpriteLoader.h">
+      <Filter>CCBReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControl.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlButton.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlColourPicker.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlExtensions.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlHuePicker.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlPotentiometer.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlSlider.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlStepper.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlSwitch.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCControlUtils.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCInvocation.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCControlExtension\CCScale9Sprite.h">
+      <Filter>GUI\CCControlExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCEditBox\CCEditBox.h">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCEditBox\CCEditBoxImpl.h">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCScrollView\CCScrollView.h">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCScrollView\CCSorting.h">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCScrollView\CCTableView.h">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCScrollView\CCTableViewCell.h">
+      <Filter>GUI\CCScrollView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\network\HttpClient.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\network\HttpRequest.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\network\HttpResponse.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\network\WebSocket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\network\WebSocketWinRT.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\physics_nodes\CCPhysicsDebugNode.h">
+      <Filter>physics_nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\physics_nodes\CCPhysicsSprite.h">
+      <Filter>physics_nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Animation.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\AnimationState.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\AnimationStateData.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Atlas.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\AtlasAttachmentLoader.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Attachment.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\AttachmentLoader.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Bone.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\BoneData.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\CCSkeleton.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\CCSkeletonAnimation.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\extension.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Json.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\RegionAttachment.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Skeleton.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\SkeletonData.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\SkeletonJson.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Skin.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\Slot.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\SlotData.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\spine-cocos2dx.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\spine\spine.h">
+      <Filter>spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCEditBox\CCEditBoxImplWinrt.h">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\CCEditBox\UIEditBoxImpl-winrt.h">
+      <Filter>GUI\CCEditBox</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
