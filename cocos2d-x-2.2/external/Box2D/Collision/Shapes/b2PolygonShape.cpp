@@ -139,7 +139,7 @@ void b2PolygonShape::Set(const b2Vec2* vertices, int32 count)
         m_normals[i].Normalize();
     }
 
-#ifdef _DEBUG
+#if 0
     // Ensure the polygon is convex and the interior
     // is to the left of each edge.
     for (int32 i = 0; i < m_vertexCount; ++i)
