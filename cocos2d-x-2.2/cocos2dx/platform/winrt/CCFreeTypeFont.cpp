@@ -579,7 +579,7 @@ unsigned char* CCFreeTypeFont::loadFont(const char *pFontName, unsigned long *si
         path += pFontName;
     }
 
-#if 0
+#if 1
     if (std::string::npos == lowerCase.find(".ttf"))
     {
         path += ".ttf";
