@@ -17,6 +17,8 @@
 #define SPEED_BOOST_POWER_UP_TIMEOUT 3.5f
 #define SPEED_BOOST_POWER_UP_INCREASE 2.0f
 
+int Hero::sHERO_FOOT = 100;
+
 Hero::Hero(GamePlayerProfile *profile, b2World* world, PlayerData *data) : Player(profile, world, data)
 {
     // Record the position;
@@ -95,7 +97,7 @@ void Hero::addFootSensor() {
     
     fixtureDef.isSensor = true;
     b2Fixture* footSensorFixture = getB2Body()->CreateFixture(&fixtureDef);
-    footSensorFixture->SetUserData( (void*)HERO_FOOT);
+    footSensorFixture->SetUserData( (void*)&sHERO_FOOT);
 }
 
 void Hero::update (float dt)

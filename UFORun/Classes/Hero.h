@@ -12,10 +12,6 @@
 #include "Player.h"
 #include "PlayerSpriteProfile.h"
 
-enum HeroBody_TAG
-{
-	HERO_FOOT 	= 100
-};
 
 // Ready -> Running -> FinishLine -> Reached end position (Stopped)
 typedef enum
@@ -97,6 +93,9 @@ public:
     HeroPowerUpState getHeroPowerUpState() const{
     	return _powerUpState;
 	}
+
+    static int sHERO_FOOT;
+
 };
 
 #endif /* defined(__UFORun__Hero__) */
