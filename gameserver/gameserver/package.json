@@ -1,0 +1,13 @@
+{
+  "name": "gameserver",
+  "version": "0.0.0",
+  "description": "gameserver",
+  "main": "server.js",
+  "author": {
+    "name": "stamm",
+    "email": ""
+  },
+  "dependencies": {
+    "websocket": "^1.0.22"
+  }
+}
