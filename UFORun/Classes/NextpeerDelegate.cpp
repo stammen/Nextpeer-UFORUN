@@ -50,21 +50,24 @@ void NextpeerDelegate::unhookEvents()
 void NextpeerDelegate::nextpeerDidStartTournament(CCObject *startData)
 {
     _currentGameState->reset();
-    
-    // Add opponents
-    TournamentStartData* tournamentStartData = (TournamentStartData*)startData;
-    CCObject* it = NULL;
-    CCARRAY_FOREACH(tournamentStartData->players, it)
+
+    if (startData)
     {
-        NextpeerPlayer *nextpeerPlayer = static_cast<NextpeerPlayer*>(it);
-        
-        // Cast the NextpeerPlayer class to PlayerData class which will contain the relevant data about this player
-        _currentGameState->addOpponent(PlayerData::create(nextpeerPlayer->getPlayerId(), nextpeerPlayer->getPlayerName(), nextpeerPlayer->getIsRecording()));
+        // Add opponents
+        TournamentStartData* tournamentStartData = (TournamentStartData*)startData;
+        CCObject* it = NULL;
+        CCARRAY_FOREACH(tournamentStartData->players, it)
+        {
+            NextpeerPlayer *nextpeerPlayer = static_cast<NextpeerPlayer*>(it);
+
+            // Cast the NextpeerPlayer class to PlayerData class which will contain the relevant data about this player
+            _currentGameState->addOpponent(PlayerData::create(nextpeerPlayer->getPlayerId(), nextpeerPlayer->getPlayerName(), nextpeerPlayer->getIsRecording()));
+        }
+        // Seed the random number generator with the seed that the server gave us
+        Rand::seed(tournamentStartData->tournamentRandomSeed);
     }
-    
-    // Seed the random number generator with the seed that the server gave us
-    Rand::seed(tournamentStartData->tournamentRandomSeed);
-    
+
+   
     // Tournament start, switch to the game scene
     CCScene *pScene = GameLayer::scene(_currentGameState);
     CCDirector::sharedDirector()->replaceScene(pScene);
