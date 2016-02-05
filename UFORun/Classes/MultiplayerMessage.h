@@ -39,6 +39,8 @@ public:
     
     MultiplayerMessage();
     
+    virtual std::string toJson() = 0;
+
     virtual vector<unsigned char>& toByteVector() = 0;
     virtual MultiplayerMessageType getMessageType() = 0; // Defines the message type
 protected:

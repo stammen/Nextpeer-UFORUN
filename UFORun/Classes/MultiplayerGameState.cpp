@@ -205,6 +205,8 @@ void MultiplayerGameState::dispatchAvatarNotification(const PlayerData& playerDa
     OpponentAvatarNotificationMessage* message = OpponentAvatarNotificationMessage::createWithPlayerData(playerData);
     vector<unsigned char>& buf = message->toByteVector();
     
+    std::string j = message->toJson();
+
     CCNextpeer::getInstance()->pushDataToOtherPlayers(&buf[0], buf.size());
 }
 

@@ -9,6 +9,11 @@
 #include "OpponentUpdate.h"
 #include "ViewPort.h"
 #include "Box2D.h"
+
+#include <cpprest/json.h>
+
+using namespace web;
+
 OpponentUpdate::OpponentUpdate()
 {
 }
@@ -139,4 +144,38 @@ vector<unsigned char>& OpponentUpdate::toByteVector()
     memcpy(&byteVector[0], &messageStruct, sizeof(messageStruct));
     
     return byteVector;
+}
+
+std::string OpponentUpdate::toJson()
+{
+    OpponentUpdateMessageStruct messageStruct;
+    messageStruct.header = this->getHeaderForDispatch();
+
+    messageStruct.worldPositionX = this->_worldPositionX;
+    messageStruct.worldPositionY = this->_worldPositionY;
+    messageStruct.linearVelocityX = this->_linearVelocityX;
+    messageStruct.linearVelocityY = this->_linearVelocityY;
+    messageStruct.state = this->_state;
+    messageStruct.isHurt = this->_isHurt;
+    messageStruct.isStuck = this->_isStuck;
+    messageStruct.powerUpState = this->mPowerUpState;
+
+    json::value h = json::value::object();
+    h[U("protocolVersion")] = json::value(messageStruct.header.protocolVersion);
+    h[U("messageType")] = json::value(messageStruct.header.messageType);
+    h[U("timeStamp")] = json::value(messageStruct.header.timeStamp);
+
+    json::value m = json::value::object();
+    m[U("worldPositionX")] = json::value(messageStruct.worldPositionX);
+    m[U("worldPositionY")] = json::value(messageStruct.worldPositionY);
+    m[U("linearVelocityX")] = json::value(messageStruct.linearVelocityX);
+    m[U("linearVelocityY")] = json::value(messageStruct.linearVelocityY);
+    m[U("state")] = json::value(messageStruct.state);
+    m[U("isHurt")] = json::value(messageStruct.isHurt);
+    m[U("isStuck")] = json::value(messageStruct.isStuck);
+    m[U("powerUpState")] = json::value(messageStruct.powerUpState);
+
+    utility::stringstream_t stream;
+    m.serialize(stream);
+    return std::string(stream.str().begin(), stream.str().end());
 }

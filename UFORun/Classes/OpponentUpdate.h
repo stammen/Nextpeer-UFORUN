@@ -66,6 +66,7 @@ public:
     static OpponentUpdate* createWithHero(const Hero* hero);
 
     virtual vector<unsigned char>& toByteVector();
+    virtual std::string toJson();
     virtual MultiplayerMessageType getMessageType();
     
     OpponentUpdate();

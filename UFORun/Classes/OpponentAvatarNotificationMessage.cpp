@@ -7,6 +7,9 @@
 //
 
 #include "OpponentAvatarNotificationMessage.h"
+#include <cpprest/json.h>
+
+using namespace web;
 
 OpponentAvatarNotificationMessage::OpponentAvatarNotificationMessage()
 {}
@@ -65,6 +68,27 @@ vector<unsigned char>& OpponentAvatarNotificationMessage::toByteVector()
     return byteVector;
 }
 
+std::string OpponentAvatarNotificationMessage::toJson()
+{
+    OpponentAvatarNotificationMessageStruct messageStruct;
+    messageStruct.header = this->getHeaderForDispatch();
+    messageStruct.avatarIdentifier = _avatarIdentifier;
+
+    json::value h = json::value::object();
+    h[U("protocolVersion")] = json::value(messageStruct.header.protocolVersion);
+    h[U("messageType")] = json::value(messageStruct.header.messageType);
+    h[U("timeStamp")] = json::value(messageStruct.header.timeStamp);
+
+    json::value m = json::value::object();
+    m[U("messageStruct")] = json::value(h);
+    m[U("avatarIdentifier")] = json::value(messageStruct.avatarIdentifier);
+    
+    utility::stringstream_t ss;
+    m.serialize(ss);
+    std::wstring w = ss.str();
+    return std::string(w.begin(), w.end());
+}
+
 bool OpponentAvatarNotificationMessage::extractDataFromByteVector(const vector<unsigned char>& byteVector)
 {
     if (byteVector.size() < sizeof(OpponentAvatarNotificationMessageStruct)) {
@@ -74,5 +98,23 @@ bool OpponentAvatarNotificationMessage::extractDataFromByteVector(const vector<u
     OpponentAvatarNotificationMessageStruct* structPtr = (OpponentAvatarNotificationMessageStruct*)&byteVector[0];
     _avatarIdentifier = static_cast<GamePlayerProfileType>(structPtr->avatarIdentifier);
     
+    return true;
+}
+
+bool OpponentAvatarNotificationMessage::fromJson(const std::string data)
+{
+    utility::stringstream_t ss;
+
+    ss << std::wstring(data.begin(), data.end());
+    json::value m = json::value::parse(ss);
+
+    if (!m.has_field(U("avatarIdentifier")))
+    {
+        return false;
+    }
+
+    int a = m.at(U("avatarIdentifier")).as_integer();
+    _avatarIdentifier = static_cast<GamePlayerProfileType>(a);
+
     return true;
 }

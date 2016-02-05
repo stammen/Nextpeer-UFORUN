@@ -31,16 +31,19 @@ class OpponentAvatarNotificationMessage : public MultiplayerMessage
 {
 protected:
     bool extractDataFromByteVector(const vector<unsigned char>& byteVector);    
-    
+    bool fromJson(const std::string data);
+
 public:
     OpponentAvatarNotificationMessage();
     PlayerData* toPlayerData();
 
     static OpponentAvatarNotificationMessage* createWithP2PData(const TournamentP2PData& tournamentP2PData);
     static OpponentAvatarNotificationMessage* createWithPlayerData(const PlayerData& playerData);
-    
+    static OpponentAvatarNotificationMessage* createWithJsonData(const std::string& data);
+
     virtual vector<unsigned char>& toByteVector();
-    
+    virtual std::string toJson();
+
     virtual MultiplayerMessageType getMessageType();
     
 public:

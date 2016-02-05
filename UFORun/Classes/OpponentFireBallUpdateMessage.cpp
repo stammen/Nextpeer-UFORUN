@@ -9,6 +9,10 @@
 #include "OpponentFireBallUpdateMessage.h"
 #include "ViewPort.h"
 
+#include <cpprest/json.h>
+
+using namespace web;
+
 OpponentFireBallUpdateMessage::OpponentFireBallUpdateMessage()
 {
 }
@@ -46,6 +50,30 @@ OpponentFireBallUpdateMessage* OpponentFireBallUpdateMessage::createWithFireBall
     message->_originPowerUpId = fireBall->getOriginPowerUpId();
     
     return message;
+}
+
+std::string OpponentFireBallUpdateMessage::toJson()
+{
+    OpponentFireBallUpdateMessageStruct messageStruct;
+    messageStruct.header = this->getHeaderForDispatch();
+    messageStruct.worldPositionX = this->_worldPositionX;
+    messageStruct.worldPositionY = this->_worldPositionY;
+    messageStruct.originPowerUpId = this->_originPowerUpId;
+
+    json::value h = json::value::object();
+    h[U("protocolVersion")] = json::value(messageStruct.header.protocolVersion);
+    h[U("messageType")] = json::value(messageStruct.header.messageType);
+    h[U("timeStamp")] = json::value(messageStruct.header.timeStamp);
+
+    json::value m = json::value::object();
+    m[U("messageStruct")] = json::value(h);
+    m[U("worldPositionX")] = json::value(messageStruct.worldPositionX);
+    m[U("worldPositionY")] = json::value(messageStruct.worldPositionY);
+    m[U("originPowerUpId")] = json::value(messageStruct.originPowerUpId);
+
+    utility::stringstream_t stream;
+    m.serialize(stream);
+    return std::string(stream.str().begin(), stream.str().end());
 }
 
 vector<unsigned char>& OpponentFireBallUpdateMessage::toByteVector()

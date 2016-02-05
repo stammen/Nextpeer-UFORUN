@@ -12,6 +12,7 @@
 #include "GameClock.h"
 #include "SpriteUpdateInterpolator.h"
 
+
 // When will this opponent should be considered as timed out?
 #define OPPONENT_TIMEOUT_VAL_SECONDS 4
 

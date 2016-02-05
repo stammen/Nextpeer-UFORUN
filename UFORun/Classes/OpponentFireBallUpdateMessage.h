@@ -46,6 +46,8 @@ public:
     static OpponentFireBallUpdateMessage* createWithFireBall(const HeroFireBall* fireBall);
     
     virtual vector<unsigned char>& toByteVector();
+    virtual std::string toJson();
+
     virtual MultiplayerMessageType getMessageType();
     
     CC_SYNTHESIZE_READONLY(float, _worldPositionX, WorldPositionX);
